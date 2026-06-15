@@ -21,10 +21,13 @@ function initScrub(cfg) {
     const img = images[index];
     if (!img || !img.complete || !img.naturalWidth) return;
     const cw = canvas.clientWidth, ch = canvas.clientHeight;
-    const ir = img.naturalWidth / img.naturalHeight, cr = cw / ch;
-    let dw, dh, dx, dy;
-    if (ir > cr) { dh = ch; dw = ch * ir; dx = (cw - dw) / 2; dy = 0; }
-    else         { dw = cw; dh = cw / ir; dx = 0; dy = (ch - dh) / 2; }
+    const ir = img.naturalWidth / img.naturalHeight;
+    // The subject is horizontally centered on a solid (black) background, so we always
+    // fit to the FULL WIDTH and center vertically. On wide viewports this fills the frame
+    // (behaves like cover); on narrow / portrait viewports it letterboxes into the black
+    // background (contain) instead of cropping the sauna at the sides — the product stays
+    // whole and the black bars are invisible against the black clip. Fully responsive.
+    const dw = cw, dh = cw / ir, dx = 0, dy = (ch - dh) / 2;
     ctx.fillStyle = bgFill; ctx.fillRect(0, 0, cw, ch);
     ctx.drawImage(img, dx, dy, dw, dh);
   }
