@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCHWITZWERK — Premium Fasssaunen Manufaktur</title>
+  <meta name="description" content="SCHWITZWERK — handgefertigte Premium-Fasssaunen aus sorgfältig getrockneter Fichte. Besser leben mit Sauna." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ───────────── Fixed nav ───────────── -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo" href="#hero">
+      <img src="assets/logo_white.png" alt="SCHWITZWERK — Premium Saunamanufaktur" />
+    </a>
+    <div class="nav-links">
+      <div class="lang-select" id="langSelect">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langCurrent">DE</span>
+          <svg viewBox="0 0 24 24" width="12" height="12"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li role="option" data-lang="de">DE</li>
+          <li role="option" data-lang="en">EN</li>
+          <li role="option" data-lang="fr">FR</li>
+          <li role="option" data-lang="ru">RU</li>
+          <li role="option" data-lang="pl">PL</li>
+        </ul>
+      </div>
+      <a href="#cta" class="nav-cta" data-i18n="nav.shop">Jetzt shoppen</a>
+    </div>
+  </nav>
+
+  <!-- ───────────── HERO — cinematic scrub (VIP Cube, push-in mit Text) ───────────── -->
+  <section class="cinematic" id="hero">
+    <div class="sticky">
+      <canvas id="hero-canvas"></canvas>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+
+      <div class="overlay overlay-left">
+        <h2 class="reveal-line" data-in="0.00" data-out="0.32" data-i18n="hero.l1">Ihre individuelle<br/><span class="gold">Premium-Sauna</span></h2>
+        <h2 class="reveal-line" data-in="0.36" data-out="0.64" data-i18n="hero.l2">Design, das von<br/>innen <span class="gold">leuchtet</span></h2>
+        <h2 class="reveal-line" data-in="0.68" data-out="1.00" data-i18n="hero.l3">Treten Sie ein.<br/>Es ist <span class="gold">warm</span>.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── Intro band ───────────── -->
+  <section class="band">
+    <p class="band-lead reveal" data-i18n="band"><em>SCHWITZWERK</em> baut Fasssaunen, die bleiben. Aus sorgfältig getrockneter Fichte, mit dem Holzofen im Herzen und der Ruhe Skandinaviens im Inneren — gefertigt für ein Leben, das sich wärmer anfühlt.</p>
+  </section>
+
+  <!-- ───────────── STORY + stats ───────────── -->
+  <section class="section story" id="story">
+    <div class="story-grid">
+      <div class="story-copy reveal">
+        <span class="kicker" data-i18n="story.kicker">Die Manufaktur</span>
+        <h2 data-i18n="story.h2">Der&nbsp;Saunaprofi.</h2>
+        <p data-i18n="story.p1">Bei SCHWITZWERK entsteht jede Sauna in Handarbeit aus hochwertiger, sorgfältig getrockneter Fichte. Wir vereinen die Tradition skandinavischer Saunakultur mit dem Anspruch einer modernen Manufaktur — für Wärme, die Generationen überdauert.</p>
+        <p data-i18n="story.p2">Schnelle Ausführung, faire Preise und individuelle Beratung: Wir begleiten Sie vom ersten Gespräch bis zur fertig aufgestellten Sauna im eigenen Garten.</p>
+        <a href="#cta" class="btn-solid" data-i18n="story.btn">Unverbindlich beraten lassen</a>
+      </div>
+      <div class="story-facts reveal">
+        <div class="fact"><span class="fact-label" data-i18n="fact.laenge.l">Länge</span><span class="fact-value" data-i18n="fact.laenge.v">ab <em>2 m</em></span></div>
+        <div class="fact"><span class="fact-label" data-i18n="fact.gewicht.l">Eigengewicht</span><span class="fact-value" data-i18n="fact.gewicht.v">ab <em>900 kg</em> solides Eigengewicht</span></div>
+        <div class="fact"><span class="fact-label" data-i18n="fact.wand.l">Wandstärke</span><span class="fact-value" data-i18n="fact.wand.v"><em>45 mm</em> massive Fichte</span></div>
+        <div class="fact"><span class="fact-label" data-i18n="fact.material.l">Material</span><span class="fact-value" data-i18n="fact.material.v"><em>100 %</em> getrocknete Fichte</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── ZUBER — cinematic scrub (Deckel öffnet, Top-Reveal) ───────────── -->
+  <section class="cinematic" id="zuber">
+    <div class="sticky">
+      <canvas id="zuber-canvas"></canvas>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+
+      <div class="overlay overlay-left">
+        <h2 class="reveal-line" data-in="0.00" data-out="0.34" data-i18n="zuber.l1">Der <span class="gold">Badezuber</span></h2>
+        <h2 class="reveal-line" data-in="0.38" data-out="0.66" data-i18n="zuber.l2">Thermo-Deckel <span class="gold">öffnen</span></h2>
+        <h2 class="reveal-line" data-in="0.70" data-out="1.00" data-i18n="zuber.l3">Eintauchen.<br/><span class="gold">Loslassen.</span></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── Feature grid ───────────── -->
+  <section class="section ausstattung">
+    <header class="section-head reveal">
+      <h2 data-i18n="aus.h2">Ausstattung wählbar</h2>
+    </header>
+    <div class="feature-grid">
+      <div class="feature reveal"><b>01</b><h4 data-i18n="feat1.t">Holzofen oder Elektroofen</h4><p data-i18n="feat1.d">Ihre Wahl: echtes Feuer und knisterndes Holz oder komfortable Elektrowärme.</p></div>
+      <div class="feature reveal"><b>02</b><h4 data-i18n="feat2.t">LED-Beleuchtung</h4><p data-i18n="feat2.d">Farbwechsel im Innenraum, bequem per Fernbedienung gesteuert.</p></div>
+      <div class="feature reveal"><b>03</b><h4 data-i18n="feat3.t">Gläserne Außentür</h4><p data-i18n="feat3.d">Klare Sicht nach draußen, Licht und Weite im Inneren.</p></div>
+      <div class="feature reveal"><b>04</b><h4 data-i18n="feat4.t">Graphit-Dach</h4><p data-i18n="feat4.d">Bitumenschindeln in Graphit — robust, dicht und elegant.</p></div>
+      <div class="feature reveal"><b>05</b><h4 data-i18n="feat5.t">Komplett-Set</h4><p data-i18n="feat5.d">Saunasteine, Hygrometer, Thermometer, Sanduhr & Aufgusseimer.</p></div>
+      <div class="feature reveal"><b>06</b><h4 data-i18n="feat6.t">Schlüsselfertig</h4><p data-i18n="feat6.d">Schnelle Ausführung, bester Service, individuelle Beratung.</p></div>
+    </div>
+  </section>
+
+  <!-- ───────────── FEATURES — cinematic scrub (orbit, kein Text) ───────────── -->
+  <section class="cinematic" id="features">
+    <div class="sticky">
+      <canvas id="features-canvas"></canvas>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+    </div>
+  </section>
+
+  <!-- ───────────── CTA ───────────── -->
+  <section class="cta" id="cta">
+    <div class="cta-inner reveal">
+      <span class="kicker" data-i18n="cta.kicker">Bereit?</span>
+      <h2 data-i18n="cta.h2">Holen Sie sich<br/>die <span class="gold">Wärme nach Hause</span>.</h2>
+      <p data-i18n="cta.p">Höchste Qualität, faire Preise und persönliche Beratung — vom ersten Gespräch bis zum ersten Aufguss.</p>
+      <div class="cta-actions">
+        <a href="https://www.schwitzwerk.de" class="btn-solid lg" data-i18n="cta.shop">Jetzt shoppen</a>
+        <a href="mailto:info@schwitzwerk.de" class="btn-line lg" data-i18n="cta.advise">Beratung anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── Google Rezensionen ───────────── -->
+  <section class="reviews-section" id="rezensionen">
+    <div class="reviews-head reveal">
+      <span class="kicker" data-i18n="rev.kicker">Rezensionen</span>
+      <div class="reviews-score">
+        <span class="reviews-num" id="rv-num">5,0</span>
+        <div class="reviews-meta">
+          <div class="stars" id="rv-stars" aria-label="Sterne">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="reviews-label" id="rv-label" data-i18n="rev.label">24 Bewertungen auf <b>Google</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid" id="rv-grid">
+      <article class="review reveal">
+        <div class="stars sm">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p data-i18n="rev1.t">„Wir sind schwer begeistert! Die Kommunikation war von Anfang an top. Super Beratung und Begleitung von Wunschäußerung bis Kauf. Auch die Sauna macht einen sehr wertigen Eindruck und entspricht genau unseren Vorstellungen. Schwitzwerk können wir mit bestem Gewissen weiterempfehlen!"</p>
+        <div class="review-author"><span class="avatar">F</span><div><b>Frech und Flauschig</b><span data-i18n="rev1.d">vor 4 Monaten</span></div></div>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars sm">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p data-i18n="rev2.t">„Besser geht's nicht! Von der Bestellung bis zur Lieferung lief alles perfekt. Ständige Kommunikation, Zuverlässigkeit und sehr gutes Preis-Leistung-Verhältnis. Sogar beim Abladen und Aufstellen hat Patrick mitgeholfen, um Beschädigungen zu vermeiden."</p>
+        <div class="review-author"><span class="avatar">B</span><div><b>Burkhard Nass</b><span data-i18n="rev2.d">vor 2 Jahren</span></div></div>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars sm">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p data-i18n="rev3.t">„Dank guter Beratung von Patrik sind wir seit 2 Monaten stolze Besitzer einer Sauna von Schwitzwerk. Transport und Aufstellung verliefen reibungslos. Haben die Sauna seither öfter genutzt und sind vollstes zufrieden. Wir können den Erwerb nur wärmstens weiterempfehlen."</p>
+        <div class="review-author"><span class="avatar">M</span><div><b>Matthias Dörl</b><span data-i18n="rev3.d">vor 10 Monaten</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ───────────── Standort / Map ───────────── -->
+  <section class="map-section" id="standort">
+    <div class="map-head reveal">
+      <span class="kicker" data-i18n="map.kicker">Standort</span>
+      <h2 data-i18n="map.h2">Besuchen Sie<br/>die <span class="gold">Manufaktur</span>.</h2>
+    </div>
+    <div class="map-frame reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.0485539139577!2d13.026059711964256!3d50.75613336518905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a74fa7bc23c953%3A0x3bfa4d0c3751401f!2sSCHWITZWERK!5e0!3m2!1sde!2sde!4v1781438945249!5m2!1sde!2sde"
+        width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="SCHWITZWERK Standort"></iframe>
+    </div>
+  </section>
+
+  <!-- ───────────── Footer ───────────── -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">SCHWITZWERK</span>
+        <span class="footer-sub" data-i18n="footer.sub">Premium Saunamanufaktur</span>
+        <nav class="footer-nav">
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.home">Startseite</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.about">Über uns</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.shop">Shop</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.tiny">Tinyhäuser</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.contact">Kontakt</a>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h5>Sachsen</h5>
+        <p>Gewerbegebiet 6<br/>09405 Gornau/Erzgeb.</p>
+        <p><a href="tel:+4917630650545">0176 306 505 45</a></p>
+        <span class="footer-note" data-i18n="footer.visit">Besichtigung nach Absprache</span>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.contactH">Kontakt</h5>
+        <p><a href="mailto:post@schwitz-werk.de">post@schwitz-werk.de</a></p>
+        <nav class="footer-legal">
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.imprint">Impressum</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.privacy">Datenschutzerklärung</a>
+          <a href="https://www.schwitzwerk.de">AGB</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.withdrawal">Widerrufsbelehrung</a>
+          <a href="https://www.schwitzwerk.de" data-i18n="footer.shipping">Versandarten</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SCHWITZWERK · All Rights Reserved</span>
+      <span data-i18n="footer.slogan">Besser leben mit Sauna.</span>
+    </div>
+  </footer>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script>
+    window.SCRUB_SECTIONS = [
+      { section:"#hero",     frameCount:179, bg:"#000000",
+        framePath:(i)=>`frames/vipcube/frame_${String(i).padStart(4,"0")}.jpg` },
+      { section:"#zuber",    frameCount:179, bg:"#000000",
+        framePath:(i)=>`frames/zuber/frame_${String(i).padStart(4,"0")}.jpg` },
+      { section:"#features", frameCount:179, bg:"#000000",
+        framePath:(i)=>`frames/orbit/frame_${String(i).padStart(4,"0")}.jpg` },
+    ];
+  </script>
+  <script src="scroll-cinematic.js"></script>
+  <script>
+    // nav background on scroll + progress bar
+    const nav = document.getElementById('nav');
+    const fill = document.getElementById('progress-fill');
+    function onScroll(){
+      const y = window.scrollY || document.documentElement.scrollTop;
+      nav.classList.toggle('scrolled', y > 40);
+      const hero = document.getElementById('hero');
+      const max = hero.offsetHeight - window.innerHeight;
+      if (fill) fill.style.width = Math.min(100, Math.max(0, (y/max)*100)) + '%';
+    }
+    document.addEventListener('scroll', onScroll, { passive:true });
+    onScroll();
+  </script>
+
+  <!-- ───────── Live Google Rezensionen (Places API) ───────── -->
+  <script>
+    // 1) Google Maps JavaScript API Key hier eintragen (Places API aktiviert,
+    //    Key auf eure Domain/localhost beschränkt). Leer = graue Platzhalter bleiben.
+    window.GOOGLE_MAPS_API_KEY = "";
+    // 2) Optional: exakte Place-ID eintragen (sonst Textsuche nach Name am Standort).
+    window.SCHWITZWERK_PLACE_ID = "";
+    window.SCHWITZWERK_QUERY = "SCHWITZWERK Gornau";
+    window.SCHWITZWERK_LATLNG = { lat: 50.75613, lng: 13.02864 };
+    // Google CID aus dem Maps-Link: 0x47a74fa7bc23c953:0x3bfa4d0c3751401f (Feature /g/11tp8qpx9g)
+
+    (function loadReviews(){
+      var key = window.GOOGLE_MAPS_API_KEY;
+      if(!key){ return; } // kein Key -> Platzhalter behalten
+      var s = document.createElement('script');
+      s.src = "https://maps.googleapis.com/maps/api/js?key="+encodeURIComponent(key)+"&libraries=places&callback=__initReviews";
+      s.async = true; s.defer = true;
+      s.onerror = function(){ console.warn('Google Maps API konnte nicht geladen werden.'); };
+      document.head.appendChild(s);
+    })();
+
+    function __starSVG(){
+      return '<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+    }
+    function __stars(n){ var h=''; for(var i=0;i<Math.round(n);i++) h+=__starSVG(); return h; }
+    function __esc(t){ var d=document.createElement('div'); d.textContent=t||''; return d.innerHTML; }
+
+    window.__initReviews = function(){
+      try{
+        var svc = new google.maps.places.PlacesService(document.createElement('div'));
+        var fields = ['rating','user_ratings_total','reviews'];
+        function details(placeId){
+          svc.getDetails({ placeId: placeId, fields: fields, language: 'de' }, function(p, status){
+            if(status !== google.maps.places.PlacesServiceStatus.OK || !p){ return; }
+            __renderReviews(p);
+          });
+        }
+        if(window.SCHWITZWERK_PLACE_ID){
+          details(window.SCHWITZWERK_PLACE_ID);
+        } else {
+          svc.findPlaceFromQuery({
+            query: window.SCHWITZWERK_QUERY,
+            fields: ['place_id'],
+            locationBias: new google.maps.LatLng(window.SCHWITZWERK_LATLNG.lat, window.SCHWITZWERK_LATLNG.lng)
+          }, function(res, status){
+            if(status === google.maps.places.PlacesServiceStatus.OK && res && res[0]){
+              details(res[0].place_id);
+            }
+          });
+        }
+      }catch(e){ console.warn('Reviews init error', e); }
+    };
+
+    function __renderReviews(p){
+      if(p.rating){
+        document.getElementById('rv-num').textContent = p.rating.toFixed(1).replace('.', ',');
+        document.getElementById('rv-stars').innerHTML = __stars(p.rating);
+      }
+      if(p.user_ratings_total){
+        document.getElementById('rv-label').innerHTML =
+          p.user_ratings_total + ' Bewertungen auf <b>Google</b>';
+      }
+      if(p.reviews && p.reviews.length){
+        var grid = document.getElementById('rv-grid');
+        grid.innerHTML = '';
+        p.reviews.slice(0,3).forEach(function(r){
+          var initial = (r.author_name||'?').trim().charAt(0).toUpperCase();
+          var art = document.createElement('article');
+          art.className = 'review in';
+          art.innerHTML =
+            '<div class="stars sm">'+__stars(r.rating)+'</div>'+
+            '<p>'+__esc(r.text)+'</p>'+
+            '<div class="review-author"><span class="avatar">'+__esc(initial)+'</span>'+
+            '<div><b>'+__esc(r.author_name)+'</b><span>'+__esc(r.relative_time_description)+'</span></div></div>';
+          grid.appendChild(art);
+        });
+      }
+    }
+  </script>
+
+  <!-- ───────── i18n: Sprachauswahl & Übersetzung ───────── -->
+  <script>
+  (function(){
+    var I18N = {
+      en:{
+        "nav.shop":"Shop now",
+        "hero.l1":"Your bespoke<br><span class='gold'>premium sauna</span>",
+        "hero.l2":"Design that<br>glows from <span class='gold'>within</span>",
+        "hero.l3":"Step inside.<br>It's <span class='gold'>warm</span>.",
+        "band":"<em>SCHWITZWERK</em> builds barrel saunas made to last. From carefully dried spruce, with a wood stove at their heart and the calm of Scandinavia within — crafted for a life that feels warmer.",
+        "story.kicker":"The Workshop",
+        "story.h2":"The sauna experts.",
+        "story.p1":"At SCHWITZWERK every sauna is handcrafted from high-quality, carefully dried spruce. We unite the tradition of Scandinavian sauna culture with the standards of a modern workshop — for warmth that outlasts generations.",
+        "story.p2":"Fast delivery, fair prices and personal advice: we guide you from the first conversation to the finished sauna in your own garden.",
+        "story.btn":"Get free advice",
+        "fact.laenge.l":"Length","fact.laenge.v":"from <em>2 m</em>",
+        "fact.gewicht.l":"Weight","fact.gewicht.v":"from <em>900 kg</em> of solid stability",
+        "fact.wand.l":"Wall thickness","fact.wand.v":"<em>45 mm</em> solid spruce",
+        "fact.material.l":"Material","fact.material.v":"<em>100 %</em> dried spruce",
+        "zuber.l1":"The <span class='gold'>hot tub</span>",
+        "zuber.l2":"<span class='gold'>Open</span> the thermal lid",
+        "zuber.l3":"Dive in.<br><span class='gold'>Let go.</span>",
+        "aus.h2":"Choose your features",
+        "feat1.t":"Wood or electric heater","feat1.d":"Your choice: real fire and crackling wood or comfortable electric heat.",
+        "feat2.t":"LED lighting","feat2.d":"Colour-changing interior light, conveniently controlled by remote.",
+        "feat3.t":"Glass front door","feat3.d":"A clear view outside, light and space within.",
+        "feat4.t":"Graphite roof","feat4.d":"Graphite bitumen shingles — robust, sealed and elegant.",
+        "feat5.t":"Complete set","feat5.d":"Sauna stones, hygrometer, thermometer, hourglass & water bucket.",
+        "feat6.t":"Turnkey","feat6.d":"Fast delivery, best service, personal advice.",
+        "cta.kicker":"Ready?","cta.h2":"Bring the<br><span class='gold'>warmth home</span>.",
+        "cta.p":"Highest quality, fair prices and personal advice — from the first conversation to the first infusion.",
+        "cta.shop":"Shop now","cta.advise":"Request advice",
+        "rev.kicker":"Reviews","rev.label":"24 reviews on <b>Google</b>",
+        "rev1.t":"“We're absolutely thrilled! Communication was top-notch from the start. Great advice and support from first wish to purchase. The sauna feels truly high-quality and matches our ideas exactly. We can recommend Schwitzwerk with a clear conscience!”","rev1.d":"4 months ago",
+        "rev2.t":"“It doesn't get better than this! Everything from order to delivery went perfectly. Constant communication, reliability and excellent value for money. Patrick even helped unload and set up to avoid any damage.”","rev2.d":"2 years ago",
+        "rev3.t":"“Thanks to Patrik's great advice, we've been proud owners of a Schwitzwerk sauna for 2 months. Transport and installation went smoothly. We've used it often since and couldn't be happier. We warmly recommend the purchase.”","rev3.d":"10 months ago",
+        "map.kicker":"Location","map.h2":"Visit the<br><span class='gold'>workshop</span>.",
+        "footer.sub":"Premium Sauna Workshop","footer.home":"Home","footer.about":"About us","footer.shop":"Shop","footer.tiny":"Tiny houses","footer.contact":"Contact",
+        "footer.visit":"Viewing by appointment","footer.contactH":"Contact","footer.imprint":"Imprint","footer.privacy":"Privacy policy","footer.withdrawal":"Right of withdrawal","footer.shipping":"Shipping","footer.slogan":"Better living with sauna."
+      },
+      fr:{
+        "nav.shop":"Acheter",
+        "hero.l1":"Votre sauna<br><span class='gold'>premium sur mesure</span>",
+        "hero.l2":"Un design qui<br>brille de <span class='gold'>l'intérieur</span>",
+        "hero.l3":"Entrez.<br>Il fait <span class='gold'>chaud</span>.",
+        "band":"<em>SCHWITZWERK</em> construit des saunas tonneau faits pour durer. En épicéa soigneusement séché, avec un poêle à bois en leur cœur et le calme de la Scandinavie à l'intérieur — façonnés pour une vie plus chaleureuse.",
+        "story.kicker":"La Manufacture",
+        "story.h2":"L'expert du sauna.",
+        "story.p1":"Chez SCHWITZWERK, chaque sauna est fabriqué à la main en épicéa de haute qualité, soigneusement séché. Nous unissons la tradition de la culture nordique du sauna à l'exigence d'une manufacture moderne — pour une chaleur qui traverse les générations.",
+        "story.p2":"Réalisation rapide, prix justes et conseil personnalisé : nous vous accompagnons du premier échange jusqu'au sauna installé dans votre jardin.",
+        "story.btn":"Conseil sans engagement",
+        "fact.laenge.l":"Longueur","fact.laenge.v":"à partir de <em>2 m</em>",
+        "fact.gewicht.l":"Poids","fact.gewicht.v":"dès <em>900 kg</em> de stabilité",
+        "fact.wand.l":"Épaisseur","fact.wand.v":"<em>45 mm</em> d'épicéa massif",
+        "fact.material.l":"Matériau","fact.material.v":"<em>100 %</em> épicéa séché",
+        "zuber.l1":"Le <span class='gold'>bain nordique</span>",
+        "zuber.l2":"<span class='gold'>Ouvrir</span> le couvercle",
+        "zuber.l3":"Plongez.<br><span class='gold'>Lâchez prise.</span>",
+        "aus.h2":"Équipement au choix",
+        "feat1.t":"Poêle à bois ou électrique","feat1.d":"À vous de choisir : feu de bois crépitant ou confort de l'électrique.",
+        "feat2.t":"Éclairage LED","feat2.d":"Lumière intérieure à changement de couleur, pilotée par télécommande.",
+        "feat3.t":"Porte vitrée","feat3.d":"Vue dégagée vers l'extérieur, lumière et espace à l'intérieur.",
+        "feat4.t":"Toit graphite","feat4.d":"Bardeaux bitumés graphite — robustes, étanches et élégants.",
+        "feat5.t":"Kit complet","feat5.d":"Pierres de sauna, hygromètre, thermomètre, sablier et seau.",
+        "feat6.t":"Clé en main","feat6.d":"Réalisation rapide, meilleur service, conseil personnalisé.",
+        "cta.kicker":"Prêt ?","cta.h2":"Faites entrer<br>la <span class='gold'>chaleur chez vous</span>.",
+        "cta.p":"Qualité supérieure, prix justes et conseil personnalisé — du premier échange à la première löyly.",
+        "cta.shop":"Acheter","cta.advise":"Demander conseil",
+        "rev.kicker":"Avis","rev.label":"24 avis sur <b>Google</b>",
+        "rev1.t":"« Nous sommes ravis ! La communication a été excellente dès le début. Super conseil et accompagnement, du premier souhait à l'achat. Le sauna fait une impression très qualitative et correspond exactement à nos attentes. Nous recommandons Schwitzwerk en toute confiance ! »","rev1.d":"il y a 4 mois",
+        "rev2.t":"« On ne fait pas mieux ! De la commande à la livraison, tout s'est déroulé parfaitement. Communication constante, fiabilité et excellent rapport qualité-prix. Patrick a même aidé au déchargement et à l'installation pour éviter tout dommage. »","rev2.d":"il y a 2 ans",
+        "rev3.t":"« Grâce aux bons conseils de Patrik, nous sommes depuis 2 mois les fiers propriétaires d'un sauna Schwitzwerk. Le transport et l'installation se sont déroulés sans accroc. Nous l'utilisons souvent depuis et sommes pleinement satisfaits. Nous recommandons vivement cet achat. »","rev3.d":"il y a 10 mois",
+        "map.kicker":"Adresse","map.h2":"Visitez la<br><span class='gold'>manufacture</span>.",
+        "footer.sub":"Manufacture de saunas premium","footer.home":"Accueil","footer.about":"À propos","footer.shop":"Boutique","footer.tiny":"Tiny houses","footer.contact":"Contact",
+        "footer.visit":"Visite sur rendez-vous","footer.contactH":"Contact","footer.imprint":"Mentions légales","footer.privacy":"Confidentialité","footer.withdrawal":"Droit de rétractation","footer.shipping":"Livraison","footer.slogan":"Mieux vivre avec le sauna."
+      },
+      ru:{
+        "nav.shop":"В магазин",
+        "hero.l1":"Ваша индивидуальная<br><span class='gold'>премиум-сауна</span>",
+        "hero.l2":"Дизайн, сияющий<br><span class='gold'>изнутри</span>",
+        "hero.l3":"Войдите.<br>Здесь <span class='gold'>тепло</span>.",
+        "band":"<em>SCHWITZWERK</em> создаёт сауны-бочки, которые остаются с вами. Из тщательно высушенной ели, с дровяной печью в сердце и скандинавским спокойствием внутри — для жизни, в которой теплее.",
+        "story.kicker":"Мануфактура",
+        "story.h2":"Профи в саунах.",
+        "story.p1":"В SCHWITZWERK каждая сауна создаётся вручную из высококачественной, тщательно высушенной ели. Мы объединяем традиции скандинавской банной культуры с уровнем современной мануфактуры — ради тепла, которое переживёт поколения.",
+        "story.p2":"Быстрое исполнение, честные цены и индивидуальная консультация: мы сопровождаем вас от первой беседы до готовой сауны в вашем саду.",
+        "story.btn":"Бесплатная консультация",
+        "fact.laenge.l":"Длина","fact.laenge.v":"от <em>2 м</em>",
+        "fact.gewicht.l":"Собственный вес","fact.gewicht.v":"от <em>900 кг</em> — устойчивость",
+        "fact.wand.l":"Толщина стен","fact.wand.v":"<em>45 мм</em> массив ели",
+        "fact.material.l":"Материал","fact.material.v":"<em>100 %</em> сушёная ель",
+        "zuber.l1":"<span class='gold'>Купель</span>",
+        "zuber.l2":"Открыть <span class='gold'>термокрышку</span>",
+        "zuber.l3":"Погрузитесь.<br><span class='gold'>Расслабьтесь.</span>",
+        "aus.h2":"Комплектация на выбор",
+        "feat1.t":"Дровяная или электропечь","feat1.d":"На ваш выбор: живой огонь и треск дров или удобное электрическое тепло.",
+        "feat2.t":"LED-подсветка","feat2.d":"Смена цвета внутри, удобное управление с пульта.",
+        "feat3.t":"Стеклянная дверь","feat3.d":"Чёткий вид наружу, свет и простор внутри.",
+        "feat4.t":"Графитовая крыша","feat4.d":"Битумная черепица графитового цвета — прочная, герметичная и элегантная.",
+        "feat5.t":"Полный комплект","feat5.d":"Камни для сауны, гигрометр, термометр, песочные часы и ведро.",
+        "feat6.t":"Под ключ","feat6.d":"Быстрое исполнение, лучший сервис, индивидуальная консультация.",
+        "cta.kicker":"Готовы?","cta.h2":"Принесите<br><span class='gold'>тепло домой</span>.",
+        "cta.p":"Высочайшее качество, честные цены и личная консультация — от первой беседы до первого пара.",
+        "cta.shop":"В магазин","cta.advise":"Запросить консультацию",
+        "rev.kicker":"Отзывы","rev.label":"24 отзыва в <b>Google</b>",
+        "rev1.t":"«Мы в полном восторге! Общение было на высоте с самого начала. Отличная консультация и сопровождение от пожелания до покупки. Сауна выглядит очень качественно и точно соответствует нашим представлениям. Рекомендуем Schwitzwerk с чистой совестью!»","rev1.d":"4 месяца назад",
+        "rev2.t":"«Лучше не бывает! От заказа до доставки всё прошло идеально. Постоянная связь, надёжность и отличное соотношение цены и качества. Патрик даже помог с разгрузкой и установкой, чтобы избежать повреждений.»","rev2.d":"2 года назад",
+        "rev3.t":"«Благодаря хорошей консультации Патрика мы уже 2 месяца гордые обладатели сауны Schwitzwerk. Доставка и установка прошли без проблем. С тех пор часто пользуемся и полностью довольны. Очень рекомендуем покупку.»","rev3.d":"10 месяцев назад",
+        "map.kicker":"Адрес","map.h2":"Посетите<br><span class='gold'>мануфактуру</span>.",
+        "footer.sub":"Премиальная мануфактура саун","footer.home":"Главная","footer.about":"О нас","footer.shop":"Магазин","footer.tiny":"Тайни-хаусы","footer.contact":"Контакты",
+        "footer.visit":"Осмотр по записи","footer.contactH":"Контакты","footer.imprint":"Выходные данные","footer.privacy":"Политика конфиденциальности","footer.withdrawal":"Право на возврат","footer.shipping":"Доставка","footer.slogan":"Жить лучше с сауной."
+      },
+      pl:{
+        "nav.shop":"Do sklepu",
+        "hero.l1":"Twoja indywidualna<br><span class='gold'>sauna premium</span>",
+        "hero.l2":"Design, który<br>świeci od <span class='gold'>środka</span>",
+        "hero.l3":"Wejdź.<br>Jest <span class='gold'>ciepło</span>.",
+        "band":"<em>SCHWITZWERK</em> buduje sauny beczkowe, które zostają na lata. Z starannie suszonego świerku, z piecem opalanym drewnem w sercu i skandynawskim spokojem w środku — stworzone dla życia, które jest cieplejsze.",
+        "story.kicker":"Manufaktura",
+        "story.h2":"Specjaliści od saun.",
+        "story.p1":"W SCHWITZWERK każda sauna powstaje ręcznie z wysokiej jakości, starannie suszonego świerku. Łączymy tradycję skandynawskiej kultury sauny z wymaganiami nowoczesnej manufaktury — dla ciepła, które przetrwa pokolenia.",
+        "story.p2":"Szybka realizacja, uczciwe ceny i indywidualne doradztwo: towarzyszymy Ci od pierwszej rozmowy aż po gotową saunę w Twoim ogrodzie.",
+        "story.btn":"Bezpłatna porada",
+        "fact.laenge.l":"Długość","fact.laenge.v":"od <em>2 m</em>",
+        "fact.gewicht.l":"Masa własna","fact.gewicht.v":"od <em>900 kg</em> solidnej masy",
+        "fact.wand.l":"Grubość ścian","fact.wand.v":"<em>45 mm</em> litego świerku",
+        "fact.material.l":"Materiał","fact.material.v":"<em>100 %</em> suszony świerk",
+        "zuber.l1":"<span class='gold'>Balia</span>",
+        "zuber.l2":"Otwórz <span class='gold'>pokrywę</span>",
+        "zuber.l3":"Zanurz się.<br><span class='gold'>Odpręż się.</span>",
+        "aus.h2":"Wyposażenie do wyboru",
+        "feat1.t":"Piec na drewno lub elektryczny","feat1.d":"Twój wybór: prawdziwy ogień i trzaskające drewno albo wygodne ciepło elektryczne.",
+        "feat2.t":"Oświetlenie LED","feat2.d":"Zmiana koloru we wnętrzu, wygodnie sterowana pilotem.",
+        "feat3.t":"Szklane drzwi","feat3.d":"Wyraźny widok na zewnątrz, światło i przestrzeń w środku.",
+        "feat4.t":"Dach grafitowy","feat4.d":"Gont bitumiczny w grafitowym kolorze — solidny, szczelny i elegancki.",
+        "feat5.t":"Pełny zestaw","feat5.d":"Kamienie do sauny, higrometr, termometr, klepsydra i wiadro.",
+        "feat6.t":"Pod klucz","feat6.d":"Szybka realizacja, najlepszy serwis, indywidualne doradztwo.",
+        "cta.kicker":"Gotowy?","cta.h2":"Sprowadź<br><span class='gold'>ciepło do domu</span>.",
+        "cta.p":"Najwyższa jakość, uczciwe ceny i osobiste doradztwo — od pierwszej rozmowy po pierwszy seans.",
+        "cta.shop":"Do sklepu","cta.advise":"Poproś o poradę",
+        "rev.kicker":"Opinie","rev.label":"24 opinie w <b>Google</b>",
+        "rev1.t":"„Jesteśmy zachwyceni! Komunikacja od początku na najwyższym poziomie. Świetne doradztwo i wsparcie od pomysłu po zakup. Sauna sprawia bardzo solidne wrażenie i dokładnie odpowiada naszym oczekiwaniom. Schwitzwerk polecamy z czystym sumieniem!”","rev1.d":"4 miesiące temu",
+        "rev2.t":"„Lepiej się nie da! Od zamówienia po dostawę wszystko poszło idealnie. Stały kontakt, niezawodność i świetny stosunek jakości do ceny. Patrick pomógł nawet przy rozładunku i ustawieniu, aby uniknąć uszkodzeń.”","rev2.d":"2 lata temu",
+        "rev3.t":"„Dzięki dobremu doradztwu Patrika od 2 miesięcy jesteśmy dumnymi właścicielami sauny Schwitzwerk. Transport i montaż przebiegły bezproblemowo. Od tego czasu często z niej korzystamy i jesteśmy w pełni zadowoleni. Gorąco polecamy ten zakup.”","rev3.d":"10 miesięcy temu",
+        "map.kicker":"Lokalizacja","map.h2":"Odwiedź<br><span class='gold'>manufakturę</span>.",
+        "footer.sub":"Manufaktura saun premium","footer.home":"Strona główna","footer.about":"O nas","footer.shop":"Sklep","footer.tiny":"Domki tiny","footer.contact":"Kontakt",
+        "footer.visit":"Oględziny po umówieniu","footer.contactH":"Kontakt","footer.imprint":"Nota prawna","footer.privacy":"Polityka prywatności","footer.withdrawal":"Prawo odstąpienia","footer.shipping":"Wysyłka","footer.slogan":"Lepsze życie z sauną."
+      }
+    };
+
+    var els = [].slice.call(document.querySelectorAll('[data-i18n]'));
+    var base = {}; // deutsche Originale
+    els.forEach(function(el){ base[el.getAttribute('data-i18n')] = el.innerHTML; });
+
+    function apply(lang){
+      var dict = (lang === 'de') ? base : I18N[lang] || base;
+      els.forEach(function(el){
+        var k = el.getAttribute('data-i18n');
+        el.innerHTML = (dict[k] != null) ? dict[k] : base[k];
+      });
+      document.documentElement.setAttribute('lang', lang);
+      document.getElementById('langCurrent').textContent = lang.toUpperCase();
+      [].forEach.call(document.querySelectorAll('#langMenu li'), function(li){
+        li.classList.toggle('active', li.getAttribute('data-lang') === lang);
+      });
+      try{ localStorage.setItem('sw_lang', lang); }catch(e){}
+    }
+
+    var sel = document.getElementById('langSelect');
+    var btn = document.getElementById('langBtn');
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = sel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(){ sel.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+    [].forEach.call(document.querySelectorAll('#langMenu li'), function(li){
+      li.addEventListener('click', function(){
+        apply(li.getAttribute('data-lang'));
+        sel.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+      });
+    });
+
+    var saved = 'de';
+    try{ saved = localStorage.getItem('sw_lang') || 'de'; }catch(e){}
+    apply(saved);
+  })();
+  </script>
+</body>
+</html>
