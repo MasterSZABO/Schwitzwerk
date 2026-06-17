@@ -1,0 +1,328 @@
+/* ============================================================
+   SCHWITZWERK – Ecwid Custom CSS  (VOLLABDECKUNG / "alles schwarz")
+   Dark / Gold / Holz-Look, passend zur Hauptseite (styles.css)
+
+   Einfügen:
+   A) Ecwid-Panel: Design → (Erweitert) → "Eigenes CSS" → alles rein.
+   B) Eingebettet: in deiner shop.html in einen <style>…</style>-Block.
+   ============================================================ */
+
+/* ---- Design-Tokens (gleiche Werte wie styles.css :root) ---- */
+:root {
+  --sw-bg:      #08070a;
+  --sw-bg-2:    #0e0d11;
+  --sw-bg-3:    #131217;   /* leicht heller für Karten/Popups */
+  --sw-ink:     #f3efe7;
+  --sw-ink-dim: #a9a39a;
+  --sw-gold:    #c9a253;
+  --sw-gold-br: #e4c178;
+  --sw-line:    rgba(201,162,83,.22);
+  --sw-serif:   "Cormorant Garamond", Georgia, serif;
+  --sw-sans:    "Jost", system-ui, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* ============================================================
+   1) GLOBALER CATCH-ALL – zwingt ALLE Ecwid-Container auf Schwarz
+   (deckt auch Klassen ab, die Ecwid künftig umbenennt)
+   ============================================================ */
+.ec-store,
+.ec-store *,
+.ecwid,
+.ecwid *,
+.ecwid-productBrowser,
+.ecwid-productBrowser *,
+[class*="ec-"],
+[class^="ecwid"] {
+  font-family: var(--sw-sans);
+  color: var(--sw-ink);
+  border-color: var(--sw-line);
+}
+
+/* Jede weiße/helle Hintergrundfläche neutralisieren */
+.ec-store,
+.ec-store__content-wrapper,
+.ec-store__body,
+.ecwid-productBrowser,
+.grid,
+.grid__products,
+.grid__sidebar,
+.page,
+.product-details,
+.product-details__product-wrap,
+.ec-cart,
+.ec-cart__body,
+.ec-cart__products,
+.ec-cart-step,
+.ec-confirmation,
+.ec-page,
+.ec-size-chart,
+.ec-store__categories,
+.ec-store__toolbar,
+.pager,
+.ec-notice,
+.ec-modal__content,
+.modal__container,
+.modal__content,
+.fancybox-skin,
+.popup,
+.popup__body,
+.gwt-PopupPanel,
+.ec-minicart,
+.ec-minicart__body,
+[class*="-background"],
+[class*="__background"] {
+  background: var(--sw-bg) !important;
+  background-color: var(--sw-bg) !important;
+  color: var(--sw-ink) !important;
+}
+
+/* leicht abgesetzte Flächen (Karten, Popups, Inputs) */
+.grid-product__wrap-inner,
+.ec-cart__products,
+.ec-cart-summary,
+.ec-modal__content,
+.modal__content,
+.popup__body,
+.product-details-module,
+.ec-store__categories-inner {
+  background: var(--sw-bg-2) !important;
+}
+
+/* ============================================================
+   2) TYPOGRAFIE
+   ============================================================ */
+.ec-store, .ecwid-productBrowser { font-weight: 300; }
+
+.ec-store h1, .ec-store h2, .ec-store h3, .ec-store h4, .ec-store h5,
+.ec-header-h1, .ec-header-h2, .ec-header-h3, .ec-header-h4, .ec-header-h5,
+.grid-product__title, .grid-product__title-inner,
+.product-details__product-title,
+.section-title__title,
+.ec-cart-step__title,
+.product-details-module__title {
+  font-family: var(--sw-serif) !important;
+  font-weight: 500 !important;
+  color: var(--sw-ink) !important;
+  letter-spacing: .01em;
+}
+
+.grid-product__sku, .grid-product__subtitle,
+.breadcrumbs__link, .pager__count,
+.form-control__placeholder, .ec-text-muted,
+.product-details__product-sku, .ec-cart-item__sku {
+  color: var(--sw-ink-dim) !important;
+}
+
+/* ============================================================
+   3) LINKS / AKZENTE
+   ============================================================ */
+.ec-store a, .ecwid a { color: var(--sw-gold-br); }
+.ec-store a:hover, .ecwid a:hover { color: var(--sw-gold); }
+
+.grid-product__price, .grid-product__price-amount,
+.product-details__product-price, .details-product-price__value,
+.ec-cart__sum, .ec-minicart__counter, .ec-cart-summary__num,
+.ec-confirmation__order-num {
+  color: var(--sw-gold-br) !important;
+  font-family: var(--sw-sans) !important;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+/* ============================================================
+   4) PRODUKT-GRID
+   ============================================================ */
+.grid-product__wrap-inner {
+  border: 1px solid var(--sw-line) !important;
+  border-radius: 6px;
+  transition: border-color .35s ease, transform .35s ease;
+}
+.grid-product__wrap-inner:hover {
+  border-color: var(--sw-gold) !important;
+  transform: translateY(-3px);
+}
+.grid-product__image-wrap { border-radius: 6px 6px 0 0; overflow: hidden; }
+
+/* Rabatt-/Sale-Badges */
+.grid-product__sale-icon, .product-details__sale-icon,
+.label--sale, .icon-percent, .ec-badge {
+  background: var(--sw-gold) !important;
+  color: var(--sw-bg) !important;
+  border-color: var(--sw-gold) !important;
+}
+
+/* ============================================================
+   5) BUTTONS
+   ============================================================ */
+.form-control--button .form-control__button,
+button.form-control__button,
+.ec-cart__button .form-control__button,
+.details-product-purchase__controls .form-control__button,
+.ec-form .form-control__button,
+.ec-link--button, .ec-cart-step__next-btn,
+.pager__btn, button[class*="button"],
+input[type="submit"], input[type="button"] {
+  background: var(--sw-gold) !important;
+  background-color: var(--sw-gold) !important;
+  color: var(--sw-bg) !important;
+  border: 1px solid var(--sw-gold) !important;
+  border-radius: 4px !important;
+  font-family: var(--sw-sans) !important;
+  font-weight: 500 !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: background .3s ease, border-color .3s ease, color .3s ease;
+}
+.form-control--button .form-control__button:hover,
+button.form-control__button:hover,
+.ec-form .form-control__button:hover,
+.ec-link--button:hover {
+  background: var(--sw-gold-br) !important;
+  border-color: var(--sw-gold-br) !important;
+  color: var(--sw-bg) !important;
+}
+
+/* Sekundär / Outline */
+.form-control--secondary .form-control__button,
+.button--secondary,
+.form-control__button--secondary,
+.ec-link--muted {
+  background: transparent !important;
+  color: var(--sw-gold-br) !important;
+  border: 1px solid var(--sw-line) !important;
+}
+.form-control--secondary .form-control__button:hover {
+  border-color: var(--sw-gold) !important;
+}
+
+/* ============================================================
+   6) FORMULARFELDER / INPUTS / SELECTS
+   ============================================================ */
+.form-control:not(.form-control--button),
+.ec-store input, .ec-store select, .ec-store textarea,
+.search__input, .ec-cart__coupon input {
+  background: var(--sw-bg-2) !important;
+  border: 1px solid var(--sw-line) !important;
+  border-radius: 4px !important;
+  color: var(--sw-ink) !important;
+}
+.form-control--focus, .form-control:focus-within,
+.ec-store input:focus, .ec-store select:focus, .ec-store textarea:focus {
+  border-color: var(--sw-gold) !important;
+  outline: none !important;
+}
+.form-control__textbox, .form-control__select,
+.form-control__select-text { color: var(--sw-ink) !important; background: transparent !important; }
+::placeholder { color: var(--sw-ink-dim) !important; }
+
+/* Checkboxen / Radios in Gold */
+.form-control--checkbox .form-control__checkbox-view,
+.form-control--radio .form-control__checkbox-view {
+  border-color: var(--sw-line) !important;
+}
+.form-control--checked .form-control__checkbox-view {
+  background: var(--sw-gold) !important;
+  border-color: var(--sw-gold) !important;
+}
+
+/* ============================================================
+   7) KATEGORIEN / FILTER / SUCHE / TOOLBAR
+   ============================================================ */
+.ec-filter__title, .grid__sidebar-title, .ec-store__categories-title {
+  color: var(--sw-gold) !important;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.ec-store__categories a, .grid__sidebar a, .ec-filter a { color: var(--sw-ink-dim) !important; }
+.ec-store__categories a:hover, .ec-store__categories a.open {
+  color: var(--sw-gold-br) !important;
+}
+.ec-filter__divider, hr, .grid-product__wrap { border-color: var(--sw-line) !important; }
+
+/* ============================================================
+   8) WARENKORB / MINICART / CHECKOUT / BESTÄTIGUNG
+   ============================================================ */
+.ec-minicart__icon, .ec-minicart__counter { color: var(--sw-gold-br) !important; }
+.ec-cart-item, .ec-cart__products, .ec-cart-summary,
+.ec-cart-step, .ec-confirmation, .ec-form {
+  background: var(--sw-bg) !important;
+  border-color: var(--sw-line) !important;
+}
+.ec-cart-item__title, .ec-cart-step__title, .ec-confirmation__title {
+  color: var(--sw-ink) !important;
+}
+.ec-cart-summary__title-total, .ec-cart-summary__num--total {
+  color: var(--sw-gold-br) !important;
+}
+
+/* ============================================================
+   9) BREADCRUMBS / PAGER / HINWEISE
+   ============================================================ */
+.breadcrumbs__link:hover { color: var(--sw-gold-br) !important; }
+.ec-notice, .ec-notice--success, .ec-notice--error {
+  background: var(--sw-bg-2) !important;
+  border: 1px solid var(--sw-line) !important;
+  color: var(--sw-ink) !important;
+}
+
+/* ============================================================
+   10) POPUPS / MODALS / OVERLAY
+   ============================================================ */
+.ec-modal, .modal, .fancybox-overlay, .popup__overlay {
+  background: rgba(0,0,0,.78) !important;
+}
+.ec-modal__content, .modal__content, .popup__body, .fancybox-skin {
+  background: var(--sw-bg-2) !important;
+  border: 1px solid var(--sw-line) !important;
+  color: var(--sw-ink) !important;
+}
+.ec-modal__close, .modal__close { color: var(--sw-ink-dim) !important; }
+
+/* ============================================================
+   11) SCROLLBAR (passend zur Hauptseite)
+   ============================================================ */
+.ec-store ::-webkit-scrollbar { width: 8px; height: 8px; }
+.ec-store ::-webkit-scrollbar-track { background: var(--sw-bg); }
+.ec-store ::-webkit-scrollbar-thumb { background: var(--sw-line); border-radius: 4px; }
+
+/* ============================================================
+   12) BILDER NICHT EINFÄRBEN (Catch-all darf Produktbilder nicht treffen)
+   ============================================================ */
+.ec-store img, .ecwid img { background: transparent !important; }
+
+/* ============================================================
+   13) STOREFRONT V3 FIXES
+   - Produktbeschreibung nicht abschneiden (Klapp-Box + Fade entfernen)
+   - blaue Default-Links („Mehr anzeigen", „Abholung") → gold
+   - ausgewählte Auswahlknöpfe (Radio/Checkbox) → gold statt blau
+   ============================================================ */
+.product-details-module__content--collapsed {
+  max-height: none !important;
+  overflow: visible !important;
+}
+.product-details-module__content--collapsed::after { display: none !important; content: none !important; }
+.product-details-module__show-more, .product-details-module__toggle { display: none !important; }
+
+.ecwid-productBrowser a, .ec-storefront-v3 a, .ec-link, .ec-link__text {
+  color: var(--sw-gold-br) !important;
+}
+.ecwid-productBrowser a:hover, .ec-link:hover { color: var(--sw-gold) !important; }
+
+.ecwid-productBrowser input[type="radio"],
+.ecwid-productBrowser input[type="checkbox"] { accent-color: var(--sw-gold) !important; }
+
+.form-control__radio:checked + .form-control__radio-view::after,
+.form-control__radio:checked ~ .form-control__radio-view::after,
+.form-control__checkbox:checked + .form-control__checkbox-view::after,
+.form-control__checkbox:checked ~ .form-control__checkbox-view::after {
+  background: var(--sw-gold) !important;
+  border-color: var(--sw-gold) !important;
+  color: var(--sw-bg) !important;
+}
+.form-control__checkbox:checked + .form-control__checkbox-view,
+.form-control__checkbox:checked ~ .form-control__checkbox-view {
+  background: var(--sw-gold) !important;
+  border-color: var(--sw-gold) !important;
+}

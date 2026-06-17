@@ -5,7 +5,7 @@
 function initScrub(cfg) {
   const section = document.querySelector(cfg.section);
   const canvas  = section.querySelector("canvas");
-  const ctx     = canvas.getContext("2d", { alpha: false });
+  const ctx     = canvas.getContext("2d", { alpha: true });
   const lines   = [...section.querySelectorAll(".reveal-line")];
   const bgFill  = cfg.bg || "#0a0a12";
   const images = [];

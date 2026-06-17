@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCHWITZWERK — Shop</title>
+  <meta name="description" content="SCHWITZWERK Online-Shop — Premium-Fasssaunen, Badezuber und Zubehör." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260617b" />
+
+  <!-- ───────── Ecwid-Theme (SCHWITZWERK dark/gold) – siehe ecwid-custom.css ───────── -->
+  <style>
+  :root{
+    --sw-bg:#08070a; --sw-bg-2:#0e0d11; --sw-bg-3:#131217;
+    --sw-ink:#f3efe7; --sw-ink-dim:#a9a39a;
+    --sw-gold:#c9a253; --sw-gold-br:#e4c178; --sw-line:rgba(201,162,83,.22);
+    --sw-serif:"Cormorant Garamond",Georgia,serif; --sw-sans:"Jost",system-ui,sans-serif;
+  }
+  .ec-store,.ec-store *,.ecwid,.ecwid *,.ecwid-productBrowser,.ecwid-productBrowser *,
+  [class*="ec-"],[class^="ecwid"]{font-family:var(--sw-sans);color:var(--sw-ink);border-color:var(--sw-line);}
+  .ec-store,.ec-store__content-wrapper,.ec-store__body,.ecwid-productBrowser,.grid,.grid__products,
+  .grid__sidebar,.page,.product-details,.product-details__product-wrap,.ec-cart,.ec-cart__body,
+  .ec-cart__products,.ec-cart-step,.ec-confirmation,.ec-page,.ec-size-chart,.ec-store__categories,
+  .ec-store__toolbar,.pager,.ec-notice,.ec-modal__content,.modal__container,.modal__content,
+  .fancybox-skin,.popup,.popup__body,.gwt-PopupPanel,.ec-minicart,.ec-minicart__body,
+  [class*="-background"],[class*="__background"]{background:var(--sw-bg)!important;background-color:var(--sw-bg)!important;color:var(--sw-ink)!important;}
+  .grid-product__wrap-inner,.ec-cart__products,.ec-cart-summary,.ec-modal__content,.modal__content,
+  .popup__body,.product-details-module,.ec-store__categories-inner{background:var(--sw-bg-2)!important;}
+  .ec-store,.ecwid-productBrowser{font-weight:300;}
+  .ec-store h1,.ec-store h2,.ec-store h3,.ec-store h4,.ec-store h5,.ec-header-h1,.ec-header-h2,
+  .ec-header-h3,.ec-header-h4,.ec-header-h5,.grid-product__title,.grid-product__title-inner,
+  .product-details__product-title,.section-title__title,.ec-cart-step__title,
+  .product-details-module__title{font-family:var(--sw-serif)!important;font-weight:500!important;color:var(--sw-ink)!important;letter-spacing:.01em;}
+  .grid-product__sku,.grid-product__subtitle,.breadcrumbs__link,.pager__count,.form-control__placeholder,
+  .ec-text-muted,.product-details__product-sku,.ec-cart-item__sku{color:var(--sw-ink-dim)!important;}
+  .ec-store a,.ecwid a{color:var(--sw-gold-br);}
+  .ec-store a:hover,.ecwid a:hover{color:var(--sw-gold);}
+  .grid-product__price,.grid-product__price-amount,.product-details__product-price,
+  .details-product-price__value,.ec-cart__sum,.ec-minicart__counter,.ec-cart-summary__num,
+  .ec-confirmation__order-num{color:var(--sw-gold-br)!important;font-family:var(--sw-sans)!important;font-weight:500;letter-spacing:.02em;}
+  .grid-product__wrap-inner{border:1px solid var(--sw-line)!important;border-radius:6px;transition:border-color .35s ease,transform .35s ease;}
+  .grid-product__wrap-inner:hover{border-color:var(--sw-gold)!important;transform:translateY(-3px);}
+  .grid-product__image-wrap{border-radius:6px 6px 0 0;overflow:hidden;}
+  .grid-product__sale-icon,.product-details__sale-icon,.label--sale,.icon-percent,.ec-badge{background:var(--sw-gold)!important;color:var(--sw-bg)!important;border-color:var(--sw-gold)!important;}
+  .form-control--button .form-control__button,button.form-control__button,.ec-cart__button .form-control__button,
+  .details-product-purchase__controls .form-control__button,.ec-form .form-control__button,.ec-link--button,
+  .ec-cart-step__next-btn,.pager__btn,button[class*="button"],input[type="submit"],input[type="button"]{
+    background:var(--sw-gold)!important;background-color:var(--sw-gold)!important;color:var(--sw-bg)!important;
+    border:1px solid var(--sw-gold)!important;border-radius:4px!important;font-family:var(--sw-sans)!important;
+    font-weight:500!important;letter-spacing:.08em;text-transform:uppercase;transition:background .3s,border-color .3s,color .3s;}
+  .form-control--button .form-control__button:hover,button.form-control__button:hover,
+  .ec-form .form-control__button:hover,.ec-link--button:hover{background:var(--sw-gold-br)!important;border-color:var(--sw-gold-br)!important;color:var(--sw-bg)!important;}
+  .form-control--secondary .form-control__button,.button--secondary,.form-control__button--secondary,
+  .ec-link--muted{background:transparent!important;color:var(--sw-gold-br)!important;border:1px solid var(--sw-line)!important;}
+  .form-control--secondary .form-control__button:hover{border-color:var(--sw-gold)!important;}
+  .form-control:not(.form-control--button),.ec-store input,.ec-store select,.ec-store textarea,
+  .search__input,.ec-cart__coupon input{background:var(--sw-bg-2)!important;border:1px solid var(--sw-line)!important;border-radius:4px!important;color:var(--sw-ink)!important;}
+  .form-control--focus,.form-control:focus-within,.ec-store input:focus,.ec-store select:focus,
+  .ec-store textarea:focus{border-color:var(--sw-gold)!important;outline:none!important;}
+  .form-control__textbox,.form-control__select,.form-control__select-text{color:var(--sw-ink)!important;background:transparent!important;}
+  .ec-store ::placeholder{color:var(--sw-ink-dim)!important;}
+  .form-control--checkbox .form-control__checkbox-view,.form-control--radio .form-control__checkbox-view{border-color:var(--sw-line)!important;}
+  .form-control--checked .form-control__checkbox-view{background:var(--sw-gold)!important;border-color:var(--sw-gold)!important;}
+  .ec-filter__title,.grid__sidebar-title,.ec-store__categories-title{color:var(--sw-gold)!important;letter-spacing:.12em;text-transform:uppercase;}
+  .ec-store__categories a,.grid__sidebar a,.ec-filter a{color:var(--sw-ink-dim)!important;}
+  .ec-store__categories a:hover,.ec-store__categories a.open{color:var(--sw-gold-br)!important;}
+  .ec-filter__divider,.ec-store hr,.grid-product__wrap{border-color:var(--sw-line)!important;}
+  .ec-minicart__icon,.ec-minicart__counter{color:var(--sw-gold-br)!important;}
+  .ec-cart-item,.ec-cart__products,.ec-cart-summary,.ec-cart-step,.ec-confirmation,.ec-form{background:var(--sw-bg)!important;border-color:var(--sw-line)!important;}
+  .ec-cart-item__title,.ec-cart-step__title,.ec-confirmation__title{color:var(--sw-ink)!important;}
+  .ec-cart-summary__title-total,.ec-cart-summary__num--total{color:var(--sw-gold-br)!important;}
+  .breadcrumbs__link:hover{color:var(--sw-gold-br)!important;}
+  .ec-notice,.ec-notice--success,.ec-notice--error{background:var(--sw-bg-2)!important;border:1px solid var(--sw-line)!important;color:var(--sw-ink)!important;}
+  .ec-modal,.modal,.fancybox-overlay,.popup__overlay{background:rgba(0,0,0,.78)!important;}
+  .ec-modal__content,.modal__content,.popup__body,.fancybox-skin{background:var(--sw-bg-2)!important;border:1px solid var(--sw-line)!important;color:var(--sw-ink)!important;}
+  .ec-modal__close,.modal__close{color:var(--sw-ink-dim)!important;}
+  .ec-store ::-webkit-scrollbar{width:8px;height:8px;}
+  .ec-store ::-webkit-scrollbar-track{background:var(--sw-bg);}
+  .ec-store ::-webkit-scrollbar-thumb{background:var(--sw-line);border-radius:4px;}
+  .ec-store img,.ecwid img{background:transparent!important;}
+
+  /* ── Storefront v3 Fixes (Links/Auswahl blau→gold, Beschreibung ausklappen) ── */
+  /* Beschreibung nicht abschneiden + Fade entfernen */
+  .product-details-module__content--collapsed{max-height:none!important;overflow:visible!important;}
+  .product-details-module__content--collapsed::after{display:none!important;content:none!important;}
+  .product-details-module__show-more,.product-details-module__toggle{display:none!important;}
+  /* blaue Default-Links (z.B. „Mehr anzeigen", „Abholung") → gold */
+  .ecwid-productBrowser a,.ec-storefront-v3 a,.ec-link,.ec-link__text{color:var(--sw-gold-br)!important;}
+  .ecwid-productBrowser a:hover,.ec-link:hover{color:var(--sw-gold)!important;}
+  /* native Eingaben einfärben */
+  .ecwid-productBrowser input[type=radio],.ecwid-productBrowser input[type=checkbox]{accent-color:var(--sw-gold)!important;}
+  /* ausgewählte Radio-/Checkbox-Punkte (Auswahlknöpfe) → gold statt blau */
+  .form-control__radio:checked + .form-control__radio-view::after,
+  .form-control__radio:checked ~ .form-control__radio-view::after,
+  .form-control__checkbox:checked + .form-control__checkbox-view::after,
+  .form-control__checkbox:checked ~ .form-control__checkbox-view::after{
+    background:var(--sw-gold)!important;border-color:var(--sw-gold)!important;color:var(--sw-bg)!important;}
+  .form-control__checkbox:checked + .form-control__checkbox-view,
+  .form-control__checkbox:checked ~ .form-control__checkbox-view{
+    background:var(--sw-gold)!important;border-color:var(--sw-gold)!important;}
+
+  /* Shop-Seiten-Layout (eigene Hülle, nutzt styles.css-Variablen) */
+  .shop-wrap{max-width:1200px;margin:0 auto;padding:140px clamp(18px,4vw,56px) 80px;}
+  .shop-head{text-align:center;margin-bottom:48px;}
+  .shop-head .kicker{font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);}
+  .shop-head h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,5vw,3.6rem);margin:.3em 0;}
+  .shop-head p{color:var(--ink-dim);max-width:560px;margin:0 auto;}
+  </style>
+</head>
+<body>
+
+  <!-- ───────────── Fixed nav ───────────── -->
+  <nav class="nav scrolled" id="nav">
+    <a class="nav-logo" href="index.html#hero">
+      <img src="assets/logo_white.png" alt="SCHWITZWERK — Premium Saunamanufaktur" />
+    </a>
+    <div class="nav-links">
+      <div class="lang-select" id="langSelect">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langCurrent">DE</span>
+          <svg viewBox="0 0 24 24" width="12" height="12"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox">
+          <li role="option" data-lang="de">DE</li>
+          <li role="option" data-lang="en">EN</li>
+          <li role="option" data-lang="fr">FR</li>
+          <li role="option" data-lang="ru">RU</li>
+          <li role="option" data-lang="pl">PL</li>
+        </ul>
+      </div>
+      <div class="nav-cta-wrap">
+        <a href="shop.html" class="nav-cta" data-i18n="nav.shop">Jetzt shoppen</a>
+        <a href="kontakt.html" class="nav-advise" data-i18n="nav.advise">Beratung anfragen</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───────────── Shop ───────────── -->
+  <main class="shop-wrap">
+    <header class="shop-head reveal">
+      <span class="kicker" data-i18n="shop.kicker">Online-Shop</span>
+      <h1 data-i18n="shop.title">Unsere Saunen</h1>
+      <p data-i18n="shop.intro">Premium-Fasssaunen, Badezuber und Zubehör — handgefertigt in Europa. Direkt online auswählen.</p>
+    </header>
+
+    <!-- Ecwid Store Embed -->
+    <div id="my-store-85312541"></div>
+    <div>
+      <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?85312541&data_platform=code&data_date=2026-06-15" charset="utf-8"></script>
+      <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-85312541");</script>
+    </div>
+  </main>
+
+  <!-- ───────────── Footer ───────────── -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">SCHWITZWERK</span>
+        <span class="footer-sub" data-i18n="footer.sub">Premium Saunamanufaktur</span>
+        <nav class="footer-nav">
+          <a href="index.html#hero" data-i18n="footer.home">Startseite</a>
+          <a href="index.html#story" data-i18n="footer.about">Über uns</a>
+          <a href="shop.html" data-i18n="footer.shop">Shop</a>
+          <a href="kontakt.html" data-i18n="footer.contact">Kontakt</a>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h5>Sachsen</h5>
+        <p>Gewerbegebiet 6<br/>09405 Gornau/Erzgeb.</p>
+        <p><a href="tel:+4917630650545">0176 306 505 45</a></p>
+        <span class="footer-note" data-i18n="footer.visit">Besichtigung nach Absprache</span>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.contactH">Kontakt</h5>
+        <p><a href="mailto:post@schwitz-werk.de">post@schwitz-werk.de</a></p>
+        <nav class="footer-legal">
+          <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutzerklärung</a>
+          <a href="agb.html">AGB</a>
+          <a href="widerruf.html" data-i18n="footer.withdrawal">Widerrufsbelehrung</a>
+          <a href="versand.html" data-i18n="footer.shipping">Versandarten</a>
+        </nav>
+      </div>
+    </div>
+        <div class="footer-social">
+          <a href="https://wa.me/4917630650545" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.017-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+          <a href="https://www.instagram.com/schwitzwerk/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61565025410902" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+    <div class="footer-bottom">
+      <span>© 2026 SCHWITZWERK · All Rights Reserved</span>
+      <span data-i18n="footer.slogan">Besser leben mit Sauna.</span>
+    </div>
+  </footer>
+
+  <!-- ───────── i18n: Sprachauswahl & Übersetzung ───────── -->
+  <script>
+  (function(){
+    var I18N = {
+      en:{ "nav.shop":"Shop now",
+        "nav.advise":"Request advice",
+        "shop.kicker":"Online shop","shop.title":"Our saunas",
+        "shop.intro":"Premium barrel saunas, hot tubs and accessories — handcrafted in Europe. Choose directly online.",
+        "footer.sub":"Premium Sauna Workshop","footer.home":"Home","footer.about":"About us","footer.shop":"Shop","footer.tiny":"Tiny houses","footer.contact":"Contact",
+        "footer.visit":"Viewing by appointment","footer.contactH":"Contact","footer.imprint":"Imprint","footer.privacy":"Privacy policy","footer.withdrawal":"Right of withdrawal","footer.shipping":"Shipping","footer.slogan":"Better living with sauna." },
+      fr:{ "nav.shop":"Acheter",
+        "nav.advise":"Demander conseil",
+        "shop.kicker":"Boutique en ligne","shop.title":"Nos saunas",
+        "shop.intro":"Saunas tonneau premium, bains nordiques et accessoires — fabriqués à la main en Europe. À choisir directement en ligne.",
+        "footer.sub":"Manufacture de saunas premium","footer.home":"Accueil","footer.about":"À propos","footer.shop":"Boutique","footer.tiny":"Tiny houses","footer.contact":"Contact",
+        "footer.visit":"Visite sur rendez-vous","footer.contactH":"Contact","footer.imprint":"Mentions légales","footer.privacy":"Confidentialité","footer.withdrawal":"Droit de rétractation","footer.shipping":"Livraison","footer.slogan":"Mieux vivre avec le sauna." },
+      ru:{ "nav.shop":"В магазин",
+        "nav.advise":"Запросить консультацию",
+        "shop.kicker":"Интернет-магазин","shop.title":"Наши сауны",
+        "shop.intro":"Премиальные сауны-бочки, купели и аксессуары — ручная работа из Европы. Выбирайте прямо онлайн.",
+        "footer.sub":"Премиальная мануфактура саун","footer.home":"Главная","footer.about":"О нас","footer.shop":"Магазин","footer.tiny":"Тайни-хаусы","footer.contact":"Контакты",
+        "footer.visit":"Осмотр по записи","footer.contactH":"Контакты","footer.imprint":"Выходные данные","footer.privacy":"Политика конфиденциальности","footer.withdrawal":"Право на возврат","footer.shipping":"Доставка","footer.slogan":"Жить лучше с сауной." },
+      pl:{ "nav.shop":"Do sklepu",
+        "nav.advise":"Poproś o poradę",
+        "shop.kicker":"Sklep internetowy","shop.title":"Nasze sauny",
+        "shop.intro":"Sauny beczki premium, balie i akcesoria — ręcznie wykonane w Europie. Wybierz bezpośrednio online.",
+        "footer.sub":"Manufaktura saun premium","footer.home":"Strona główna","footer.about":"O nas","footer.shop":"Sklep","footer.tiny":"Domki tiny","footer.contact":"Kontakt",
+        "footer.visit":"Oględziny po umówieniu","footer.contactH":"Kontakt","footer.imprint":"Nota prawna","footer.privacy":"Polityka prywatności","footer.withdrawal":"Prawo odstąpienia","footer.shipping":"Wysyłka","footer.slogan":"Lepsze życie z sauną." }
+    };
+
+    var els = [].slice.call(document.querySelectorAll('[data-i18n]'));
+    var base = {};
+    els.forEach(function(el){ base[el.getAttribute('data-i18n')] = el.innerHTML; });
+
+    function apply(lang){
+      var dict = (lang === 'de') ? base : I18N[lang] || base;
+      els.forEach(function(el){
+        var k = el.getAttribute('data-i18n');
+        el.innerHTML = (dict[k] != null) ? dict[k] : base[k];
+      });
+      document.documentElement.setAttribute('lang', lang);
+      document.getElementById('langCurrent').textContent = lang.toUpperCase();
+      [].forEach.call(document.querySelectorAll('#langMenu li'), function(li){
+        li.classList.toggle('active', li.getAttribute('data-lang') === lang);
+      });
+      try{ localStorage.setItem('sw_lang', lang); }catch(e){}
+    }
+
+    var sel = document.getElementById('langSelect');
+    var btn = document.getElementById('langBtn');
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = sel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(){ sel.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+    [].forEach.call(document.querySelectorAll('#langMenu li'), function(li){
+      li.addEventListener('click', function(){
+        apply(li.getAttribute('data-lang'));
+        sel.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+      });
+    });
+
+    var saved = 'de';
+    try{ saved = localStorage.getItem('sw_lang') || 'de'; }catch(e){}
+    apply(saved);
+  })();
+  </script>
+
+  <!-- reveal on scroll -->
+  <script>
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.12 });
+    [].forEach.call(document.querySelectorAll('.reveal'), function(el){ io.observe(el); });
+  </script>
+  <script src="consent.js?v=20260617b"></script>
+</body>
+</html>
